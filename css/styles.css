@@ -33,3 +33,12 @@
   position: fixed;
   border: 2px solid #bbb;
 }
+
+#diceRole {
+  height: 10%;
+  width: 70%;
+  overflow: scroll;
+  position: fixed;
+  border: 1px solid #bbb;
+  margin-top: 27%;
+}
