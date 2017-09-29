@@ -1,0 +1,35 @@
+.header {
+  text-align: center;
+}
+
+#hold {
+  float: left;
+  width: 30%;
+  margin-left: 10%;
+}
+
+#role {
+  float: right;
+  width: 30%;
+  margin-right: 10%;
+}
+
+.scores {
+  text-align: center;
+}
+
+#output1 {
+  height: 60%;
+  width: 37%;
+  overflow: scroll;
+  position: fixed;
+  border: 2px solid #bbb;
+}
+
+#output2 {
+  height: 60%;
+  width: 40%;
+  overflow: scroll;
+  position: fixed;
+  border: 2px solid #bbb;
+}
