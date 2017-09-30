@@ -10,11 +10,10 @@ function game() {
   this.turn=0;
 }
 
-function switchPlayer() {
-  if (this.roll===1) {
-    $('#output1').clear;
-  }
-}
+// function switchPlayer() {
+//   if (this.roll===1) {
+//   }
+// }
 
 var newGame = new game();
 
@@ -27,8 +26,9 @@ game.prototype.rollDice = function () {
 game.prototype.additionOfSubtotal = function () {
   if (this.roll === 1){
     this.subtotal=0;
+    $('#output1').empty();
   }else if (this.roll !==1) {
-      this.subtotal=+this.roll;
+      this.subtotal=this.subtotal+this.roll;
   }
 };
 
