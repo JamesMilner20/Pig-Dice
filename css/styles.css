@@ -8,7 +8,7 @@
   margin-left: 10%;
 }
 
-#role {
+#roll {
   float: right;
   width: 30%;
   margin-right: 10%;
@@ -24,6 +24,7 @@
   overflow: scroll;
   position: fixed;
   border: 2px solid #bbb;
+    list-style: none;
 }
 
 #output2 {
@@ -32,13 +33,15 @@
   overflow: scroll;
   position: fixed;
   border: 2px solid #bbb;
+  list-style: none;
 }
 
-#diceRole {
+#diceRoll {
   height: 10%;
   width: 70%;
   overflow: scroll;
   position: fixed;
   border: 1px solid #bbb;
   margin-top: 27%;
+  list-style: none;
 }

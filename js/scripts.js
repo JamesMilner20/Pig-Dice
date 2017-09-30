@@ -1,14 +1,48 @@
 // function newNumber (number) {
 //   this.
 // }
+// function hold ($('#diceRole').val().split())
 
+function game() {
+  this.total=0;
+  this.subtotal=0;
+  this.roll=0;
+  this.turn=0;
+}
 
+function switchPlayer() {
+  if (this.roll===1) {
+    $('#output1').clear;
+  }
+}
+
+var newGame = new game();
+
+game.prototype.rollDice = function () {
+  var randomNum = Math.floor((Math.random() * 6) + 1);
+  this.roll = randomNum;
+  this.additionOfSubtotal();
+};
+
+game.prototype.additionOfSubtotal = function () {
+  if (this.roll === 1){
+    this.subtotal=0;
+  }else if (this.roll !==1) {
+      this.subtotal=+this.roll;
+  }
+};
 
 $(document).ready(function(){
-  $("#role").click(function (event) {
+  $("#roll").click(function (event) {
     event.preventDefault()
-    var randomNum = Math.floor((Math.random() * 6) + 1);
-        $('#diceRole').append(randomNum);
+      newGame.rollDice()
+        $('#output1').append("<li>"+newGame.roll+"<li>");
+        $('#ps1').text(newGame.subtotal);
+        $('p1').text(newGame.total);
 
   })
+
+  // $("#hold").click(function(){
+
+  // })
 });
