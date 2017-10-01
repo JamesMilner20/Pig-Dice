@@ -4,8 +4,8 @@ function game() {
   this.roll=0;
   this.turn=0;
 }
-
-var newGame = new game();
+// var newPlayer = new player();
+// var newGame = new game();
 
 game.prototype.rollDice = function () {
   var randomNum = Math.floor((Math.random() * 6) + 1);
@@ -19,7 +19,6 @@ game.prototype.additionOfSubtotal = function () {
     $('#output1').empty();
   }else if (this.roll !==1) {
       this.subtotal=this.subtotal+this.roll;
-      // this.total = this.total + this.subtotal;
   }
 };
 
@@ -29,7 +28,7 @@ game.prototype.totalNum = function () {
   this.subtotal = 0;
   $('#output1').empty();
   if (this.bank>=100) {
-    alert ('You Won')
+    alert ('You Won');
   }
 };
 
@@ -39,6 +38,9 @@ $(document).ready(function(){
   $("#roll").click(function (event) {
     event.preventDefault()
       newGame.rollDice()
+        // var results1 = $('#output1').append("<li>"+newGame.roll+"<li>");
+        // var results2 = $('#output2').append("<li>"+newGame.roll+"<li>");
+        // var playersResults = new results (results1, results1);
         $('#output1').append("<li>"+newGame.roll+"<li>");
         $('#ps1').text(newGame.subtotal);
 
